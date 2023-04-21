@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Check Elligibility</title>
+</head>
+<body>
+<h1  style="color:pink;text-align:center;">Check-Corona-Vaccine-Elligibility</h1>
+<form action="http://localhost:3030/CoronaVaccineApp/coronaurl" method="GET" onsubmit="validate(this)">
+Person Name    :: <input type="text" name="pname"><br>
+Person Address :: <input type="text" name="paddrs"><br>
+Person Age     :: <input type="number" name="page"><br>
+<input type="submit" value="Click for Check">
+</form>
+<script type="text/javascript">
+// client side validation
+function validate(frm)
+{
+	let name =frm.pname.value;
+	let address =frm.paddrs.value;
+	let age =frm.page.value;
+	let flag=true;
+	if(name=="")       // CName validaiton
+		{
+		 alert("Name is required!!");
+		 frm.pname.focus();
+		 flag=false;
+		}
+	if(address=="")
+		{
+		 alert("Address is required!!");
+		 flag=false;
+		 frm.paddrs.focus();
+		}
+	else if(address.length<10)
+		{
+		 alert("Address length must be greater than 10 chars...");
+		 flag=false;
+		 frm.paddrs.focus();
+		}
+	if(age=="")
+		{
+		 alert("Age is required!!");
+		 flag=false;
+		 frm.page.focus();
+		}
+	else if(isNan(age))
+		{
+		 alert("Age must a numeric value!!");
+		 flag=false;
+		 frm.page.focus();
+		}
+	else if(age<=0 && age>125)
+		{
+		 alert("Please enter correct age!1")
+		 flag=false;
+		 frm.page.focus();
+		}
+	return flag;
+}
+</script>
+</body>
+</html>

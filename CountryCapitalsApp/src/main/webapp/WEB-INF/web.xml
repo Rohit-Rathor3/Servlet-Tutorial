@@ -1,0 +1,14 @@
+<web-app>
+<display-name>GET CAPITAL</display-name>
+<welcome-file-list>
+<welcome-file>home.html</welcome-file>
+</welcome-file-list>
+<servlet>
+<servlet-name>capitalCheck</servlet-name>
+<servlet-class>com.nit.servlet.GetCapitalServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>capitalCheck</servlet-name>
+<url-pattern>/capital</url-pattern>
+</servlet-mapping>
+</web-app>

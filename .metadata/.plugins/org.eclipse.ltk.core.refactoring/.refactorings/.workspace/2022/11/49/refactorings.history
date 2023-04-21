@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SessionMgmtApp1-UsingHiddenForm&apos; to &apos;DynamicFormGeneration&apos;" description="Rename resource &apos;SessionMgmtApp1-UsingHiddenForm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SessionMgmtApp1-UsingHiddenForm" name="DynamicFormGeneration" stamp="1669647902251" updateReferences="true"/>
+</session>

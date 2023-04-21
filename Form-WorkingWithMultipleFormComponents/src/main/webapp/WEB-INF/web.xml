@@ -1,0 +1,14 @@
+<web-app>
+<display-name>WorkingWithMultipleFormComps</display-name>
+<welcome-file-list>
+<welcome-file>form.html</welcome-file>
+</welcome-file-list>
+<servlet>
+<servlet-name>form</servlet-name>
+<servlet-class>com.nit.servlet.FormCompsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>form</servlet-name>
+<url-pattern>/formurl</url-pattern>
+</servlet-mapping>
+</web-app>

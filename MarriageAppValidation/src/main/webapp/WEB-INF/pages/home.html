@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Check Marriage Eligibility</title>
+</head>
+<body>
+<form action="marriage" method="POST" onsubmit="return validate(this)">
+<label>Name ::</label>
+<input type="text" name="pname"  ><span id="pnameErr" style="color:red"></span><br>
+<label>Gender ::</label>
+<input type="radio" name="pgender" value="male"><label>Male</label>
+<input type="radio" name="pgender" value="female"><label>Female</label><span id="pgenderErr" style="color:red"></span><br>
+<label>Age ::</label>
+<input type="text" name="page"><span id="pageErr" style="color:red"></span><br>
+
+<input type="submit" value="Check Eligibility">
+<input type="reset" value="Reset">
+<input type="hidden" value="no" name="hiddenCol">
+</form>
+
+<script language="Javascript">
+function validate(frm)
+{
+	//empty value form error messages
+	document.getElementById("pnameErr").innerHTML ="";
+	document.getElementById("pgenderErr").innerHTML ="";
+	document.getElementById("pageErr").innerHTML ="";
+	
+	let flag=true;
+	let name =frm.pname.value;
+	let gender =frm.pgender.value;
+	let age =frm.page.value;
+	if(name=="")
+		{frm.hiddenCol.value="yes";
+		document.getElementById("pnameErr").innerHTML ="Person name is required!!";
+		frm.pname.focus();
+		flag=false;
+		}
+	if(gender=="")
+	{
+	document.getElementById("pgenderErr").innerHTML ="Gender is required!!";
+	frm.pgender.focus();
+	flag=false;
+	}
+	if(age=="")
+	{
+	document.getElementById("pageErr").innerHTML ="Age is required!!";
+	frm.page.focus();
+	flag=false;
+	}
+	else if(isNaN(age))
+		{
+		document.getElementById("pageErr").innerHTML ="Age must be numeric type only !!";
+		frm.page.focus();
+		flag=false;
+		}
+	else
+	{
+	document.getElementById("pageErr").innerHTML ="Age is not Valid!!";
+	frm.page.focus();
+	flag=false;
+	}
+	return flag;
+	
+}
+</script>
+</body>
+</html>

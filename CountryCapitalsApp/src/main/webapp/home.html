@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Check Capital</title>
+</head>
+<body>
+<h1 style="color:pink;text-align:center">HTML to Servlet Communication using JavaScript</h1>
+<!-- we can use Post mode also -->
+<form action="capital" method="get" name="frm" >
+<label>Select Country ::</label>
+<select name="country" onchange="send()">
+<option value="-1" selected>--Select-Country--</option>
+<option value="0">India</option>
+<option value="1">Pakistan</option>
+<option value="2">USA</option>
+<option value="3">China</option>
+<option value="4">Thailand</option>
+</select>
+</form>
+<script language="JavaScript">
+function send()
+{
+	frm.submit(); //submits the request to action url
+}
+
+</script>
+</body>
+</html>
